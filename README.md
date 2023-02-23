@@ -1,3 +1,4 @@
+![Quickie Image](assets/icons/quickie_128x128.png)
 # Quickie
 
 Direct jump to search results. A browser extension which is serves the similar
