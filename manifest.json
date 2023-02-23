@@ -12,5 +12,12 @@
   },
   "permissions": [
     "search"
-  ]
+  ],
+  "icons": {
+    "16": "assets/icons/quickie_16x16.png",
+    "32": "assets/icons/quickie_32x32.png",
+    "48": "assets/icons/quickie_48x48.png",
+    "64": "assets/icons/quickie_64x64.png",
+    "128": "assets/icons/quickie_128x128.png"
+  }
 }
