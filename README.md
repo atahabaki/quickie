@@ -1,4 +1,6 @@
 ![Quickie Image](assets/icons/quickie_128x128.png)
+
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ignmehciiafidaiahcfcdbcjfbjkickc?color=00FFFF&logo=Google-Chrome&logoColor=0FF&style=for-the-badge)](https://chrome.google.com/webstore/detail/quickie/ignmehciiafidaiahcfcdbcjfbjkickc)
 # Quickie
 
 Direct jump to search results. A browser extension which is serves the similar
