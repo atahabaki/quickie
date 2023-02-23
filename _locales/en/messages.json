@@ -1,0 +1,10 @@
+{
+  "appname": {
+    "message": "Quickie",
+    "description": "App name"
+  },
+  "appdesc": {
+    "message": "Direct jump to search results.",
+    "description": "App description"
+  }
+}

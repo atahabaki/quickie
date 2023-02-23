@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appname__",
+  "description": "__MSG_appdesc__",
+  "default_locale": "en",
+  "version": "0.1",
+  "omnibox": {
+    "keyword": "!"
+  },
+  "background": {
+    "service_worker": "src/app.js"
+  },
+  "permissions": [
+    "search"
+  ]
+}
