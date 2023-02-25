@@ -1,6 +1,7 @@
 ![Quickie Image](assets/icons/quickie_128x128.png)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ignmehciiafidaiahcfcdbcjfbjkickc?color=00FFFF&logo=Google-Chrome&logoColor=0FF&style=for-the-badge)](https://chrome.google.com/webstore/detail/quickie/ignmehciiafidaiahcfcdbcjfbjkickc)
+[![](https://img.shields.io/static/v1?style=for-the-badge&label=Microsoft%20Edge%20Add-ons&message=V0.1&color=0FF&logo=Microsoft-Edge&logoColor=0FF)](https://microsoftedge.microsoft.com/addons/detail/eblcenalfamhbigbhhnoncinmipgdeah)
 # Quickie
 
 Direct jump to search results. A browser extension which is serves the similar
