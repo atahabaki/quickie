@@ -97,7 +97,7 @@ chrome.omnibox.onInputChanged.addListener((input, suggest) => {
   let trimmed = input.trim();
   if (trimmed.length === 0)
     return;
-  let words = trimmed.split(" ");
+  let words = trimmed.split(" ").filter(w => w !== " ");
   // First word is the !Bang that we try to match
   let bang = words[0];
   // Search for !Bang match on bangs-index/bangs.json
@@ -110,6 +110,11 @@ chrome.omnibox.onInputChanged.addListener((input, suggest) => {
       let filter_res = bangs.bangs.filter(b => b.bang.includes(bang));
       let sugs = [];
       if (filter_res.length === 0) {
+        chrome.omnibox.setDefaultSuggestion(
+          {
+            "description": chrome.i18n.getMessage("query_on_default").replace("{%query%}", input)
+          }
+        );
         return;
       }
       if (words.length === 0) {
@@ -117,13 +122,29 @@ chrome.omnibox.onInputChanged.addListener((input, suggest) => {
       }
       else if (words.length === 1) {
         filter_res.forEach(b => {
+          if (b.bang === words[0]) {
+            chrome.omnibox.setDefaultSuggestion(
+              {
+                "description": chrome.i18n.getMessage("jump_to_home").replace("{%site%}", b.name)
+              }
+            );
+          }
           sugs.push(form_jump_sug(b));
         });
       }
       else {
         words.shift();
+        let query = words.join(" ");
         filter_res.forEach(b => {
-          sugs.push(form_query_sug(words.join(" "), b));
+          let content = `${b.bang} ${query}`;
+          if (content === input) {
+            chrome.omnibox.setDefaultSuggestion(
+              {
+                "description": chrome.i18n.getMessage("query").replace("{%query%}", query).replace("{%site%}", b.name)
+              }
+            );
+          }
+          else sugs.push(form_query_sug(words.join(" "), b));
         });
       }
       // Suggest if it's not empty.
