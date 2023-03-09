@@ -69,3 +69,64 @@ chrome.omnibox.onInputEntered.addListener((input, disposition) => {
       }
     });
 });
+
+/**
+ * Takes query, and bang object to form a suggestion Object.
+ * @param {String} query To be queried on the Bang!
+ * @param {Object} bang Object with name, bang, homepage, and url.
+ */
+function form_query_sug(query, bang) {
+  return {
+    "content": `${bang.bang} ${query}`,
+    "description": chrome.i18n.getMessage("query").replace("{%query%}", query).replace("{%site%}", bang.name)
+  };
+}
+
+/**
+ * Takes query, and bang object to form a suggestion Object.
+ * @param {Object} bang Object with name, bang, homepage, and url.
+ */
+function form_jump_sug(bang) {
+  return {
+    "content": bang.bang, // otherwise, it won't go to the jump loc.
+    "description": chrome.i18n.getMessage("jump_to_home").replace("{%site%}", bang.name)
+  };
+}
+
+chrome.omnibox.onInputChanged.addListener((input, suggest) => {
+  let trimmed = input.trim();
+  if (trimmed.length === 0)
+    return;
+  let words = trimmed.split(" ");
+  // First word is the !Bang that we try to match
+  let bang = words[0];
+  // Search for !Bang match on bangs-index/bangs.json
+  fetch("https://raw.githubusercontent.com/atahabaki/bangs-index/dev/bangs.json")
+    .then(res => {
+      if (!res.ok) return;
+      return res.json();
+    })
+    .then(bangs => {
+      let filter_res = bangs.bangs.filter(b => b.bang.includes(bang));
+      let sugs = [];
+      if (filter_res.length === 0) {
+        return;
+      }
+      if (words.length === 0) {
+        return;
+      }
+      else if (words.length === 1) {
+        filter_res.forEach(b => {
+          sugs.push(form_jump_sug(b));
+        });
+      }
+      else {
+        words.shift();
+        filter_res.forEach(b => {
+          sugs.push(form_query_sug(words.join(" "), b));
+        });
+      }
+      // Suggest if it's not empty.
+      if (sugs.length !== 0) suggest(sugs);
+    });
+});
