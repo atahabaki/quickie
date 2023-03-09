@@ -3,7 +3,7 @@
   "name": "__MSG_appname__",
   "description": "__MSG_appdesc__",
   "default_locale": "en",
-  "version": "0.1",
+  "version": "0.2",
   "omnibox": {
     "keyword": "!"
   },
