@@ -129,7 +129,7 @@ chrome.omnibox.onInputChanged.addListener((input, suggest) => {
               }
             );
           }
-          sugs.push(form_jump_sug(b));
+          else sugs.push(form_jump_sug(b));
         });
       }
       else {
