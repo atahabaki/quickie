@@ -7,10 +7,6 @@
     "message": "Direct jump to search results.",
     "description": "App description"
   },
-  "search_on_default": {
-    "message": "Search on your default search engine.",
-    "description": "Default suggestion box"
-  },
   "query_on_default": {
     "message": "Search <b>{%query%}</b> on your default search engine.",
     "description": "Default suggestion box"
