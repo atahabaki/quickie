@@ -137,7 +137,7 @@ chrome.omnibox.onInputChanged.addListener((input, suggest) => {
         let query = words.join(" ");
         filter_res.forEach(b => {
           let content = `${b.bang} ${query}`;
-          if (content === input) {
+          if (content === input.trim()) {
             chrome.omnibox.setDefaultSuggestion(
               {
                 "description": chrome.i18n.getMessage("query").replace("{%query%}", query).replace("{%site%}", b.name)
