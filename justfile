@@ -16,3 +16,6 @@ chromium:
 
 clean:
 	rm -rf ./manifest.json
+
+debug_firefox:
+	cp ./manifest.firefox.json ./manifest.json
