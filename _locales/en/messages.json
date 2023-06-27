@@ -8,11 +8,11 @@
     "description": "App description"
   },
   "query_on_default": {
-    "message": "Search <b>{%query%}</b> on your default search engine.",
+    "message": "Search {%query%} on your default search engine.",
     "description": "Default suggestion box"
   },
   "query": {
-    "message": "Search <b>{%query%}</b> on <b>{%site%}</b> engine.",
+    "message": "Search {%query%} on {%site%} engine.",
     "description": "Default suggestion box"
   },
   "jump_to_home": {
