@@ -1,6 +1,6 @@
 ![Quickie Image](assets/icons/quickie_128x128.png)
 
-[![License: GPL-3-0](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: GPL-3-0](https://img.shields.io/badge/License-GPL-blue.svg)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ignmehciiafidaiahcfcdbcjfbjkickc?color=00FFFF&logo=Google-Chrome&logoColor=0FF&style=for-the-badge)](https://chrome.google.com/webstore/detail/quickie/ignmehciiafidaiahcfcdbcjfbjkickc)
