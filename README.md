@@ -22,7 +22,7 @@ providing access to a diverse set of search engines and services.
 ## Usage
 
 1. Install the Quickie Browser Extension from the Chrome Web Store or Firefox Add-ons.
-2. Once installed, simply type the bang of your desired search engine, followed by your search query. For example, !y OpenAI searches for "OpenAI" on YouTube.
+2. Once installed, simply type the bang of your desired search engine, followed by your search query. For example, `!y OpenAI` searches for `OpenAI` on __YouTube__.
 3. Press enter and enjoy quick access to relevant search results without leaving your current webpage.
 
 ## Contributing
