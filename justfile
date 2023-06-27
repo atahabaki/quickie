@@ -15,7 +15,7 @@ chromium:
 	rm -rf ./manifest.json
 
 clean:
-	rm -rf ./manifest.json
+	rm -rf ./manifest.json ./quickie.*.zip
 
 debug_firefox:
 	cp ./manifest.firefox.json ./manifest.json
