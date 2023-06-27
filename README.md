@@ -7,9 +7,6 @@
 [![Microsoft Edge Add-ons](https://img.shields.io/static/v1?style=for-the-badge&label=Microsoft%20Edge%20Add-ons&message=V0.2&color=0FF&logo=Microsoft-Edge&logoColor=0FF)](https://microsoftedge.microsoft.com/addons/detail/eblcenalfamhbigbhhnoncinmipgdeah)
 # Quickie
 
-Direct jump to search results. A browser extension which is serves the similar
-purpose of [DuckDuckGo !Bangs](https://duckduckgo.com/bangs).
-
 Quickie is a versatile browser extension that revolutionizes your web search experience.
 Say goodbye to the hassle of manually navigating to different search engines - Quickie brings them all to your fingertips!
 
